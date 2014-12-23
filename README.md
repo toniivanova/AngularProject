@@ -1,4 +1,0 @@
-AngularProject
-==============
-
-Angular Project
