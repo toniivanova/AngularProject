@@ -26,6 +26,7 @@ body {
 }
 
 
+
 main aside h3:after
 {
     content: ' ';
@@ -38,14 +39,25 @@ main aside h3:after
     width: 150px;
     height: 370px;
 }
-
+#menuCategory{
+    display: block;
+    float: right;
+    width: 150px;
+    height: 370px;
+}
+#menuTown{
+    display: block;
+    float: right;
+    width: 150px;
+    height: 320px;
+}
 #wrapper {
     padding-bottom:40px;
     /*margin-left: 111px;*/
     margin: 20px;
     text-align: center;
     background: #e2f0d9;
-
+    flex-flow: row wrap;
 }
 
 body main aside {
@@ -164,3 +176,7 @@ table th, table td {
     border: 1px solid darkslategray;
 }
 
+#menuLogReg { order: 1; }
+.main    { order: 2; }
+#menuCategory { order: 3; }
+.footer  { order: 4; }
