@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular project</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- <script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script> -->
+
+
+</head>
+<body ng-app="softUniModule" ng-controller="SoftUniController">
+<div class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+        </button>
+        <a class="navbar-brand" href="#">SoftUniAd</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#/ads">All publish ads</a></li>
+            <li class="active"><a href="#/login">Login</a></li>
+            <li class="active"><a href="#/register">Register</a></li>
+        </ul>
+    </div>
+</div>
+{{name}}
+<div ng-view class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="js/services/app.js"></script>
+<script src="js/controllers/mainController.js"></script>
+</body>
+</html>
