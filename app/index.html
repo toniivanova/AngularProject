@@ -3,9 +3,14 @@
 <head>
     <title>Angular project</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
     <!-- <script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
     <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script> -->
-
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/services/app.js"></script>
+    <script type="text/javascript" src="js/controllers/mainController.js"></script>
+    <script type="text/javascript" src="js/services/mainPage.js"></script>
 
 </head>
 <body ng-app="softUniModule" ng-controller="SoftUniController">
@@ -17,23 +22,18 @@
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#/ads">All publish ads</a></li>
+            <li class="active"><a href="#/ads">All published ads</a></li>
             <li class="active"><a href="#/login">Login</a></li>
             <li class="active"><a href="#/register">Register</a></li>
         </ul>
     </div>
 </div>
-{{name}}
+
 <div ng-view class="container">
-    <div class="row">
-        <div class="col-md-2"></div>
-    </div>
+
 </div>
 
 
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular/angular-route.min.js"></script>
-<script src="js/services/app.js"></script>
-<script src="js/controllers/mainController.js"></script>
+
 </body>
 </html>
