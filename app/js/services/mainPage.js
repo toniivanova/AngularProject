@@ -26,6 +26,26 @@ softUni.factory('mainData', function ($http, $log) {
                 .error(function (data, status, headers, config) {
                     $log.warn(data);
                 })
+        },
+        login: function(successCallback, errorCallback) {
+            $http({method: 'POST', url: 'http://softuni-ads.azurewebsites.net/api/user/login'})
+                .success(function (data, status, headers, config) {
+                    successCallback(data);
+                })
+                .error(function (data, status, headers, config) {
+                    errorCallback(data);
+                })
+        },
+        logout: function(successCallback, errorCallback){
+            $http({method: 'POST', url: url + 'logout', headers: {
+                "Authorization": "Bearer " + session.get().access_token
+            }})
+                .success(function(data, status, headers, config){
+                    successCallback(data);
+                })
+                .error(function(data, status, headers, config){
+                    errorCallback(data);
+                });
         }
     }
 })

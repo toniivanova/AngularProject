@@ -59,4 +59,9 @@
          data-current-page="currentPage" data-max-size="maxSize"
          data-boundary-links="true"></div>-->
     <pagination total-items="totalItems" item-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged(currentPage)"></pagination>
+    <!--<div class="pagination-wrap">
+        <ul class="pagination">
+            <li ng-repeat="page in paginationList" ng-click="showPage(page.link)" ng-class="{'active':currentPageNum()==page.link}"><a ng-bind-html="page.name"></a></li>
+        </ul>
+    </div>-->
 </div>

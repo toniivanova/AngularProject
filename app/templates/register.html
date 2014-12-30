@@ -1,66 +1,63 @@
 <div class="col-lg-6">
     <div class="well bs-component">
-        <form class="form-horizontal">
+        <form class="form-horizontal" name="registerForm">
             <fieldset>
                 <legend>User Registration</legend>
                 <div class="form-group">
                     <label for="username" class="col-lg-2 control-label">Username:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <input type="text" class="form-control" id="username" placeholder="Username" required ng-model="user.username">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password:</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required ng-model="user.password">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Confirm Password:</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword_repeat" placeholder="Confirm Password">
+                        <input type="password" class="form-control" id="inputPassword_repeat" placeholder="Confirm Password" required ng-model="user.confirmPassword">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="name" class="col-lg-2 control-label">Name:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <input type="text" class="form-control" id="name" placeholder="Name" required ng-model="user.name">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" required ng-model="user.mail">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="phone" class="col-lg-2 control-label">Phone:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="phone" placeholder="Phone">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone" required ng-model="user.phone">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <label for="town" class="col-lg-2 control-label">Town:</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select class="form-control" id="town" required ng-model="adData.townId">
+                            <option value="null">(None)</option>
+                            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <button class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button class="btn btn-default"><a href="#/ads">Cancel</a></button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">Submit</button>
                     </div>
                 </div>
             </fieldset>

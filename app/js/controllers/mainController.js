@@ -4,8 +4,8 @@ softUni.controller('SoftUniController', function ($scope,mainData) {
 
     mainData.getAllAds(function(resp){
         $scope.data=resp;
-        $scope.ads=$scope.data.slice(0, $scope.itemsPerPage);
-        $scope.totalItems=$scope.data.length;
+        //$scope.ads=$scope.data.slice(0, $scope.itemsPerPage);
+        //$scope.totalItems=$scope.data.length;
 
     });
     mainData.getAllTowns(function(resp){
@@ -15,11 +15,11 @@ softUni.controller('SoftUniController', function ($scope,mainData) {
         $scope.categories=resp;
     });
 
-    $scope.pageChanged = function(currentPage){
+    /*$scope.pageChanged = function(currentPage){
     var start = (currentPage-1)*$scope.itemsPerPage;
     var end = start+$scope.itemsPerPage;
     $scope.ads=$scope.data.slice(start,end);
-};
+};*/
 
     /*function TodoController($scope) {
         $scope.filteredTodos = []
@@ -47,4 +47,15 @@ softUni.controller('SoftUniController', function ($scope,mainData) {
         });
 
     }*/
+});
+
+softUni.controller('LoginController', function ($scope, $location) {
+    $scope.title='Login page';
+
+    $scope.credentials={username:'', password:''}
+
+    $scope.login= function () {
+        console.log($scope.credentials.username);
+        $location.path('/newAd');
+    };
 });

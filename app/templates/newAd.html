@@ -1,40 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>BG Shop</title>
-<link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-<div id="login-form" class="dialog-box">
-    <h1>Publish New Ad</h1>
-    <p>
-        <label for="title">Title:</label>
-        <input type="text" id="title" />
+<div class="col-lg-6">
+    <div class="well bs-component">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Publish New Ad</legend>
+                <div class="form-group">
+                    <label for="inputTitle" class="col-lg-2 control-label">Title:</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="adData.title" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Text:</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" rows="3" id="textArea" ng-model="adData.text" required></textarea>
+                    </div>
+                </div>
 
-    </p>
-    <p>
-        <label for="text">Text:</label>
-        <input type="text" id="text" />
-        <input type="text" style="width: 100px; height: 100px;"/>
-    </p>
-    <p>
-        <label for="image">Image:</label>
-        <input type="text" id="image" />
-        <a href="#" class="button">Browse...</a>
-    </p>
-    <p>
-        <label for="category">Category:</label>
-        <input type="text" id="category" />
-    </p>
-    <p>
-        <label for="town">Town:</label>
-        <input type="text" id="town" />
-    </p>
-    <p class="buttons">
-        <a href="#" class="button">Publish</a>
-        <a href="#" class="button">Cancel</a>
-    <p>
+                <div class="form-group">
+                    <label for="image" class="col-lg-2 control-label">Image:</label>
+                    <div class="col-lg-10">
+                        <input type="file" class="form-control" rows="3" id="image" onchange="angular.element(this).scope().fileSelected(this)" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="image-box">
+                        <p><label for="image" class="col-lg-2 control-label">Image Preview:</label></p>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="category" class="col-lg-2 control-label">Category:</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" id="category" ng-model="adData.categoryId">
+                            <option value="null">(None)</option>
+                            <option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="town" class="col-lg-2 control-label">Town:</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" id="town" ng-model="adData.townId">
+                            <option value="null">(None)</option>
+                            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button class="btn btn-default"><a href="#/user/ads">Cancel</a></button>
+                        <button type="submit" class="btn btn-primary"><a ng-click="publishAd(adData)">Publish</a></button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </div>
-</body>
-</html>
