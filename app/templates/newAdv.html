@@ -1,38 +1,40 @@
-<div class="col-lg-5">
-    <div class="well bs-component">
-        <form class="form-horizontal">
-            <fieldset>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-10">
+<div class="well bs-component">
+    <form class="form-horizontal" name="adForm">
+        <fieldset>
                 <legend>Publish New Ad</legend>
                 <div class="form-group">
                     <label for="inputTitle" class="col-lg-2 control-label">Title:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="adData.title" required>
+                        <input type="text" class="form-control" id="inputTitle" placeholder="Title" required ng-model="adData.title" >
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="textArea" class="col-lg-2 control-label">Text:</label>
                     <div class="col-lg-10">
-                        <textarea class="form-control" rows="3" id="textArea" ng-model="adData.text" required></textarea>
+                        <textarea class="form-control" rows="3" id="textArea" required ng-model="adData.text" ></textarea>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="image" class="col-lg-2 control-label">Image:</label>
                     <div class="col-lg-10">
-                        <input type="file" class="form-control" rows="3" id="image" onchange="angular.element(this).scope().fileSelected(this)" />
+                        <input type="file" class="btn btn-info col-lg-12" id="image" onchange="angular.element(this).scope().fileSelected(this)" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="image-box">
-                        <p><label for="image" class="col-lg-2 control-label">Image Preview:</label></p>
+                        <label for="imagePreview" class="col-lg-2 control-label">Image Preview:</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" rows="3" id="imagePreview"></textarea>
                     </div>
                 </div>
-
 
                 <div class="form-group">
                     <label for="category" class="col-lg-2 control-label">Category:</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="category" ng-model="adData.categoryId">
+                        <select class="form-control" id="category" required ng-model="adData.categoryId">
                             <option value="null">(None)</option>
                             <option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
                         </select>
@@ -42,19 +44,22 @@
                 <div class="form-group">
                     <label for="town" class="col-lg-2 control-label">Town:</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="town" ng-model="adData.townId">
+                        <select class="form-control" id="town" required ng-model="adData.townId">
                             <option value="null">(None)</option>
                             <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <button class="btn btn-default"><a href="#/user/ads">Cancel</a></button>
-                        <button type="submit" class="btn btn-primary"><a ng-click="publishAd(adData)">Publish</a></button>
+                        <button class="btn btn-default"><a href="#/ads">Cancel</a></button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="adForm.$invalid" ng-click="publishAd(adData)">Publish</button>
                     </div>
                 </div>
             </fieldset>
         </form>
+    </div>
+</div>
     </div>
 </div>

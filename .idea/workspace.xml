@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b8b9056-1628-4f4b-bc46-6bea2e874652" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\IT\kurs ANGULAR JAVASCRIPT\Project\AngularProject\app\lib\ui-bootstrap-tpls-0.12.0.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/all-ads.html" afterPath="$PROJECT_DIR$/app/templates/all-ads.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/app.js" afterPath="$PROJECT_DIR$/app/js/services/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/editProfile.html" afterPath="$PROJECT_DIR$/app/templates/editProfile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/mainController.js" afterPath="$PROJECT_DIR$/app/js/controllers/mainController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/mainPage.js" afterPath="$PROJECT_DIR$/app/js/services/mainPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/newAd.html" afterPath="$PROJECT_DIR$/app/templates/newAd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/register.html" afterPath="$PROJECT_DIR$/app/templates/register.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\IT\kurs ANGULAR JAVASCRIPT\Project\AngularProject\app\templates\newAd.html" afterPath="$PROJECT_DIR$/app/templates/newAdv.html" />
     </list>
     <ignored path="IntroductionToAngularJS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,68 +29,7 @@
     <favorites_list name="IntroductionToAngularJS" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693" vertical-offset="204" max-vertical-offset="799">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all-ads.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/all-ads.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="1547">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/js/services/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7938808" vertical-offset="0" max-vertical-offset="621">
-              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newAd.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/newAd.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1105">
-              <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.923077" vertical-offset="497" max-vertical-offset="1207">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="54" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,14 +54,15 @@
         <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/js/services/mainPage.js" />
         <option value="$PROJECT_DIR$/app/templates/register.html" />
-        <option value="$PROJECT_DIR$/app/js/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/adsController.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/templates/login.html" />
         <option value="$PROJECT_DIR$/app/templates/editProfile.html" />
         <option value="$PROJECT_DIR$/app/templates/newAd.html" />
         <option value="$PROJECT_DIR$/app/templates/all-ads.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/app/js/services/app.js" />
+        <option value="$PROJECT_DIR$/app/templates/newAdv.html" />
       </list>
     </option>
   </component>
@@ -356,14 +291,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22637014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22637014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -399,7 +334,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/newAd.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/newAdv.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="1105">
           <caret line="47" column="33" selection-start-line="44" selection-start-column="24" selection-end-line="47" selection-end-column="33" />
@@ -439,7 +374,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/newAd.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/newAdv.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="1105">
           <caret line="47" column="33" selection-start-line="44" selection-start-column="24" selection-end-line="47" selection-end-column="33" />
@@ -697,14 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/adsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services/mainPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2236842" vertical-offset="0" max-vertical-offset="952">
@@ -739,58 +666,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.923077" vertical-offset="497" max-vertical-offset="1207">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="54" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/editProfile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3281787" vertical-offset="676" max-vertical-offset="1258">
-          <caret line="51" column="76" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state vertical-scroll-proportion="-0.8402062" vertical-offset="625" max-vertical-offset="1207">
+          <caret line="8" column="134" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="134" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="204" max-vertical-offset="799">
+        <state vertical-scroll-proportion="0.7714286" vertical-offset="0" max-vertical-offset="799">
           <caret line="27" column="47" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/newAd.html">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/adsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.68438005" vertical-offset="0" max-vertical-offset="629">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="30" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/all-ads.html">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="1547">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.16425121" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/editProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.43127146" vertical-offset="676" max-vertical-offset="1258">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/newAdv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96391755" vertical-offset="0" max-vertical-offset="1190">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7938808" vertical-offset="0" max-vertical-offset="621">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.65700483" vertical-offset="0" max-vertical-offset="621">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/all-ads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58655465" vertical-offset="824" max-vertical-offset="1445">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="40" />
           <folding />
         </state>
       </provider>
