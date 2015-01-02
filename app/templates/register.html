@@ -48,7 +48,7 @@
                 <div class="form-group">
                     <label for="town" class="col-lg-2 control-label">Town:</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="town" required ng-model="adData.townId">
+                        <select class="form-control" id="town" ng-model="adData.townId">
                             <option value="null">(None)</option>
                             <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
                         </select>

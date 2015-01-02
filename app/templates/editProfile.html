@@ -1,35 +1,69 @@
-<div id="login-form" class="dialog-box">
-    <h1>Edit Profile</h1>
-    <p><label for="name">Name:</label></p>
-    <p><input type="text" id="name" /></p>
-
-    <p><label for="email">Email:</label></p>
-    <p><input type="text" id="email" /></p>
-
-    <p><label for="phone">Phone:</label></p>
-    <p><input type="text" id="phone" /></p>
-
-    <p><label for="town">Town:</label></p>
-    <p><input type="text" id="town" /></p>
-
-    <p class="buttons">
-        <a href="#" class="button">Update</a>
-        <a href="#" class="button">Cancel</a>
-    <p>
-</div>
-<div class="dialog-box">
-    <h1>Change Password</h1>
-    <p><label>Old password:</label></p>
-    <p><input type="password" id="oldPassword" /></p>
-
-    <p><label>New password:</label></p>
-    <p><input type="password" id="newPassword" /></p>
-
-    <p><label>Confirm new password:</label></p>
-    <p><input type="password" id="confirmNewPassword" /></p>
-
-    <p class="buttons">
-        <a href="#" class="button">Change password</a>
-        <a href="#" class="button">Cancel</a>
-    <p>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Edit Profile</h3>
+                </div>
+                <div class="panel-body">
+                    <p><label for="name">Name:</label></p>
+                    <p><input type="text" id="name" /></p>
+                </div>
+                <div class="panel-body">
+                    <p><label for="email">Email:</label></p>
+                    <p><input type="text" id="email" /></p>
+                </div>
+                <div class="panel-body">
+                    <p><label for="phone">Phone:</label></p>
+                    <p><input type="text" id="phone" /></p>
+                </div>
+                <div class="panel-body">
+                    <p><label for="town" class="col-lg-offset-0">Town:</label></p>
+                    <div class="col-lg-8" style="padding-left: 0">
+                        <select class="form-control" id="town" ng-model="adData.townId">
+                            <option value="null">(None)</option>
+                            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-10 col-lg-offset-0">
+                        <button class="btn btn-default" ><a href="#/ads">Cancel</a></button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Change Password</h3>
+                </div>
+                <div class="panel-body">
+                    <p><label>Old password:</label></p>
+                    <p><input type="password" id="oldPassword" /></p>
+                </div>
+                <div class="panel-body">
+                    <p><label>New password:</label></p>
+                    <p><input type="password" id="newPassword" /></p>
+                </div>
+                <div class="panel-body">
+                    <p><label>Confirm new password:</label></p>
+                    <p><input type="password" id="confirmNewPassword" /></p>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-10 col-lg-offset-0">
+                        <button class="btn btn-default" ><a href="#/ads">Cancel</a></button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Change password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

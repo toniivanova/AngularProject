@@ -1,5 +1,24 @@
 <div class="jumbotron">
     <div class="row">
+        <div class="col-md-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Navigation</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#/ads">Home</a>
+                </div>
+                <div class="panel-body">
+                    <a href="#">My Ads</a>
+                </div>
+                <div class="panel-body">
+                    <a href="#/newAd">Published New Ad</a>
+                </div>
+                <div class="panel-body">
+                    <a href="#/editProfile">Edit Profile</a>
+                </div>
+            </div>
+        </div>
         <div class="col-md-8">
             <ul id="ul">
                 <li ng-repeat="ad in data.ads">
@@ -35,7 +54,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Categories</h3>
@@ -53,15 +72,14 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <!--<div data-pagination="" data-num-pages="numPages()"
-         data-current-page="currentPage" data-max-size="maxSize"
-         data-boundary-links="true"></div>-->
-    <pagination total-items="totalItems" item-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged(currentPage)"></pagination>
-    <!--<div class="pagination-wrap">
-        <ul class="pagination">
-            <li ng-repeat="page in paginationList" ng-click="showPage(page.link)" ng-class="{'active':currentPageNum()==page.link}"><a ng-bind-html="page.name"></a></li>
-        </ul>
-    </div>-->
+    <pagination class="pagination"
+                total-items="totalItems"
+                items-per-page="itemsPerPage"
+                max-size="maxSize"
+                page="$parent.currentPage"
+                ng-model="currentPage"
+                boundary-links="true"
+                rotate="true"
+                ng-change="pageChanged()"></pagination>
 </div>
