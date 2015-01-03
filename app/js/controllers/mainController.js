@@ -5,6 +5,7 @@ softUni.controller('SoftUniController', function ($scope, $location, $routeParam
     mainData.getAllCategories(function(resp){
         $scope.categories=resp;
     });
+
 });
 
 softUni.controller('LoginController', function ($scope, $location) {
@@ -14,7 +15,6 @@ softUni.controller('LoginController', function ($scope, $location) {
 
     $scope.login= function () {
         console.log($scope.credentials.username);
-        //$location.path('/newAd');
     };
 });
 

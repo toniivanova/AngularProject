@@ -23,7 +23,9 @@ var softUni=angular.module('softUniModule',['ngRoute', 'ui.bootstrap'])
         });
         $routeProvider.when('/newAdv',{
             templateUrl:'templates/newAdv.html'
-
+        });
+        $routeProvider.when('/editAdv',{
+            templateUrl:'templates/editAdv.html'
         });
         $routeProvider.otherwise({redirectTo:'/ads'});
     });
