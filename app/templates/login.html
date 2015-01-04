@@ -6,19 +6,22 @@
                 <div class="form-group">
                     <label for="username" class="col-lg-2 control-label">Username:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="username" placeholder="Username" name="username" required ng-model="credentials.username">
+                        <input type="text" class="form-control" id="username" placeholder="Username" name="username" required data-ng-model="login.userName">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password:</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required ng-model="credentials.password">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required data-ng-model="login.password">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button class="btn btn-default" ><a href="#/ads">Cancel</a></button>
-                        <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Submit</button>
+                        <button type="submit" class="btn btn-primary" data-ng-click="login()" ng-disabled="loginForm.$invalid">Submit</button>
+                        <div data-ng-hide="message == ''" class="alert alert-danger">
+                            {{message}}
+                        </div>
                     </div>
                 </div>
             </fieldset>

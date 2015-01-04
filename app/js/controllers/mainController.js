@@ -8,7 +8,8 @@ softUni.controller('SoftUniController', function ($scope, $location, $routeParam
 
 });
 
-softUni.controller('LoginController', function ($scope, $location) {
+
+/*softUni.controller('Login', function ($scope, $location) {
     $scope.title='Login page';
 
     $scope.credentials={username:'', password:''}
@@ -27,9 +28,9 @@ softUni.controller('UserPublishNewAdController',
 
         $scope.fileSelected = function(fileInputField) {
             delete $scope.adData.imageDataUrl;
-            var file = fileInputField.files[0];
-            if (file.type.match(/image\/.*/)) {
-                var reader = new FileReader();
+            var file = fileInputField.files[0];*/
+            //if (file.type.match(/image\/.*/)) {
+                /*var reader = new FileReader();
                 reader.onload = function() {
                     $scope.adData.imageDataUrl = reader.result;
                     $(".image-box").html("<img src='" + reader.result + "'>");
@@ -52,4 +53,4 @@ softUni.controller('UserPublishNewAdController',
             );
         };
     }
-);
+);*/

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b8b9056-1628-4f4b-bc46-6bea2e874652" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/editAdv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/adsController.js" afterPath="$PROJECT_DIR$/app/js/controllers/adsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/all-ads.html" afterPath="$PROJECT_DIR$/app/templates/all-ads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/refresh.html" />
+      <change type="DELETED" beforePath="E:\IT\kurs ANGULAR JAVASCRIPT\Project\AngularProject\app\templates\welcome.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/app.js" afterPath="$PROJECT_DIR$/app/js/services/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/login.html" afterPath="$PROJECT_DIR$/app/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/mainController.js" afterPath="$PROJECT_DIR$/app/js/controllers/mainController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/mainPage.js" afterPath="$PROJECT_DIR$/app/js/services/mainPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/newAdv.html" afterPath="$PROJECT_DIR$/app/templates/newAdv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/register.html" afterPath="$PROJECT_DIR$/app/templates/register.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IntroductionToAngularJS.iws" />
@@ -34,71 +34,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="799">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1037">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state vertical-scroll-proportion="-18.0" vertical-offset="382" max-vertical-offset="1003">
+              <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adsController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/controllers/adsController.js">
+      <file leaf-file-name="authInterceptorService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/services/authInterceptorService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1122">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state vertical-scroll-proportion="-14.692307" vertical-offset="26" max-vertical-offset="748">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all-ads.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/all-ads.html">
+      <file leaf-file-name="authService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/services/authService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="1173" max-vertical-offset="1819">
-              <caret line="81" column="109" selection-start-line="81" selection-start-column="101" selection-end-line="81" selection-end-column="109" />
+            <state vertical-scroll-proportion="0.34615386" vertical-offset="196" max-vertical-offset="2091">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editAdv.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/editAdv.html">
+      <file leaf-file-name="mainPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/services/mainPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.384615" vertical-offset="0" max-vertical-offset="1173">
-              <caret line="48" column="112" selection-start-line="48" selection-start-column="112" selection-end-line="48" selection-end-column="112" />
+            <state vertical-scroll-proportion="-17.961538" vertical-offset="26" max-vertical-offset="1207">
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tokensManagerService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/services/tokensManagerService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="544">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../tutorial/AngularJSAuthentication/AngularJSAuthentication.Web/index.html">
+        <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.32733813" vertical-offset="600" max-vertical-offset="1156">
+              <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -126,20 +116,33 @@
         <option value="$PROJECT_DIR$/app/problem1/index.html" />
         <option value="$PROJECT_DIR$/app/mainController/mainController.js" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
-        <option value="$PROJECT_DIR$/app/templates/register.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/templates/login.html" />
         <option value="$PROJECT_DIR$/app/templates/newAd.html" />
-        <option value="$PROJECT_DIR$/app/js/services/mainPage.js" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/templates/editProfile.html" />
         <option value="$PROJECT_DIR$/app/js/controllers/adsController.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers/mainController.js" />
-        <option value="$PROJECT_DIR$/app/js/services/app.js" />
         <option value="$PROJECT_DIR$/app/templates/newAdv.html" />
         <option value="$PROJECT_DIR$/app/templates/all-ads.html" />
         <option value="$PROJECT_DIR$/app/templates/editAdv.html" />
         <option value="$PROJECT_DIR$/../tutorial/AngularJSAuthentication/AngularJSAuthentication.Web/index.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/ordersController.js" />
+        <option value="$PROJECT_DIR$/app/js/services/mainPage.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/homeController.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/mainController.js" />
+        <option value="$PROJECT_DIR$/app/templates/welcome.html" />
+        <option value="$PROJECT_DIR$/app/templates/register.html" />
+        <option value="$PROJECT_DIR$/app/templates/login.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/indexController.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/loginController.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/refreshController.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/signupController.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/tokensManagerController.js" />
+        <option value="$PROJECT_DIR$/app/js/services/authInterceptorService.js" />
+        <option value="$PROJECT_DIR$/app/js/services/app.js" />
+        <option value="$PROJECT_DIR$/app/js/services/authService.js" />
+        <option value="$PROJECT_DIR$/app/js/services/tokensManagerService.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/associateController.js" />
+        <option value="$PROJECT_DIR$/app/js/services/ordersService.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
@@ -179,6 +182,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,32 +272,9 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntroductionToAngularJS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AngularProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,10 +295,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -325,10 +310,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -368,47 +349,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38235295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22637014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38235295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -431,100 +392,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="799">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1938">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/mainPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="952">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/newAdv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="1105">
-          <caret line="47" column="33" selection-start-line="44" selection-start-column="24" selection-end-line="47" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="799">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/mainPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="612">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="935">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/all-ads.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="1258">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="221">
@@ -714,33 +581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49656358" vertical-offset="0" max-vertical-offset="582">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/mainPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77557755" vertical-offset="635" max-vertical-offset="1241">
-          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2197092" vertical-offset="0" max-vertical-offset="619">
           <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,74 +598,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/register.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/newAdv.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23448277" vertical-offset="0" max-vertical-offset="1207">
-          <caret line="8" column="134" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="134" />
+        <state vertical-scroll-proportion="1.8758621" vertical-offset="0" max-vertical-offset="1190">
+          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tutorial/AngularJSAuthentication/AngularJSAuthentication.Web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9230769" vertical-offset="306" max-vertical-offset="1717">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/editAdv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4068966" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="48" column="112" selection-start-line="48" selection-start-column="112" selection-end-line="48" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/all-ads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34401348" vertical-offset="1173" max-vertical-offset="1819">
+          <caret line="81" column="109" selection-start-line="81" selection-start-column="101" selection-end-line="81" selection-end-column="109" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
+    <entry file="file://$PROJECT_DIR$/app/templates/refresh.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1037">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="578">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.538462" vertical-offset="650" max-vertical-offset="1258">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="595">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers/adsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
+        <state vertical-scroll-proportion="0.2190016" vertical-offset="0" max-vertical-offset="1122">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/associateController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="799">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="47" />
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="323">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/homeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/indexController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="272">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="493">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/mainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0" vertical-offset="26" max-vertical-offset="1054">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/refreshController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="408">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/signupController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.115385" vertical-offset="52" max-vertical-offset="765">
+          <caret line="17" column="71" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/tokensManagerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028571429" vertical-offset="0" max-vertical-offset="595">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state vertical-scroll-proportion="-18.0" vertical-offset="382" max-vertical-offset="1003">
+          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/newAdv.html">
+    <entry file="file://$PROJECT_DIR$/app/js/services/authInterceptorService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8758621" vertical-offset="0" max-vertical-offset="1190">
-          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+        <state vertical-scroll-proportion="-14.692307" vertical-offset="26" max-vertical-offset="748">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/all-ads.html">
+    <entry file="file://$PROJECT_DIR$/app/js/services/authService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="1173" max-vertical-offset="1819">
-          <caret line="81" column="109" selection-start-line="81" selection-start-column="101" selection-end-line="81" selection-end-column="109" />
+        <state vertical-scroll-proportion="0.34615386" vertical-offset="196" max-vertical-offset="2091">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/editAdv.html">
+    <entry file="file://$PROJECT_DIR$/app/js/services/tokensManagerService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.384615" vertical-offset="0" max-vertical-offset="1173">
-          <caret line="48" column="112" selection-start-line="48" selection-start-column="112" selection-end-line="48" selection-end-column="112" />
+        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tutorial/AngularJSAuthentication/AngularJSAuthentication.Web/index.html">
+    <entry file="file://$PROJECT_DIR$/app/js/services/mainPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.961538" vertical-offset="26" max-vertical-offset="1207">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32733813" vertical-offset="600" max-vertical-offset="1156">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
           <folding />
         </state>
       </provider>

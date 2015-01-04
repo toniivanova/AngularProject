@@ -27,7 +27,7 @@ softUni.factory('mainData', function ($http, $log, $rootScope) {
                     $log.warn(data);
                 });
         },
-        login: function(successCallback, errorCallback) {
+        /*login: function(successCallback, errorCallback) {
             $http({method: 'POST', url: 'http://softuni-ads.azurewebsites.net/api/user/login'})
                 .success(function (data, status, headers, config) {
                     successCallback(data);
@@ -46,7 +46,7 @@ softUni.factory('mainData', function ($http, $log, $rootScope) {
                 .error(function(data, status, headers, config){
                     errorCallback(data);
                 });
-        },
+        },*/
         getAdsFilter: function (townId, categoryId, success) {
             $rootScope.$broadcast('isLoading', true);
             $http({method:'GET', url: 'http://softuni-ads.azurewebsites.net/api/ads?townid='+townId+'&categoryid='+categoryId})
@@ -59,10 +59,7 @@ softUni.factory('mainData', function ($http, $log, $rootScope) {
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
                     $log.warn(data);
-                })
-                .finally(function () {
-                    $rootScope.$broadcast('isLoading', false);
                 });
         }
     }
-})
+});
