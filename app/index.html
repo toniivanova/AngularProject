@@ -6,34 +6,26 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <!-- <script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
     <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script> -->
-    <script type="text/javascript" src="lib/angular/angular.js"></script>
-    <script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
-    <script type="text/javascript" src="lib/angular/angular-local-storage.min.js"></script>
-    <script type="text/javascript" src="lib/angular/loading-bar.min.js"></script>
-    <script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+
 
 
 </head>
-<body ng-app="softUniModule" ng-controller="SoftUniController">
+<body ng-app="softUniModule">
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-        </button>
         <a class="navbar-brand" href="#">SoftUniAd</a>
     </div>
-    <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <div class="navbar-collapse collapse navbar-inverse-collapse" >
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#/ads">All published ads</a></li>
-            <li class="active"><a href="#/login">Login</a></li>
-            <li class="active"><a href="#/register">Register</a></li>
+            <li ><a href="#/ads">All published ads</a></li>
+            <li  ><a href="#/login">Login</a></li>
+            <li  ><a href="#/register">Register</a></li>
+            <li ><a ng-href="#/ads">user</a></li>
         </ul>
-        <div class="nav navbar-nav navbar-right" data-collapse="!navbarExpanded">
+        <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
-                <li data-ng-hide="!authentication.isAuth"><a href="#/refresh">Refresh</a></li>
-                <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
-                <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
-                <li data-ng-hide="authentication.isAuth"> <a href="#/register">Sign Up</a></li>
+
+                <li class="active" ><a href ng-click="logout()">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -43,21 +35,23 @@
     <div data-ng-view="">
     </div>
 </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/angular/angular.js"></script>
+<script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/ngStorage.js"></script>
+<script type="text/javascript" src="lib/angular/angular-resource.min.js"></script>
+<script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+<script src="lib/ngStorage.js"></script>
 <!-- Load services -->
 <script type="text/javascript" src="js/services/app.js"></script>
-<script type="text/javascript" src="js/services/mainPage.js"></script>
-<script src="js/services/authInterceptorService.js"></script>
-<script src="js/services/authService.js"></script>
-<script src="js/services/tokensManagerService.js"></script>
+<script type="text/javascript" src="js/services/mainServices.js"></script>
+<script type="text/javascript" src="js/services/regLogServices.js"></script>
+
 <!-- Load controllers -->
 <script type="text/javascript" src="js/controllers/mainController.js"></script>
 <script type="text/javascript" src="js/controllers/adsController.js"></script>
-<script type="text/javascript" src="js/controllers/homeController.js"></script>
-<script type="text/javascript" src="js/controllers/indexController.js"></script>
-<script type="text/javascript" src="js/controllers/loginController.js"></script>
-<script type="text/javascript" src="js/controllers/signupController.js"></script>
-<script type="text/javascript" src="js/controllers/refreshController.js"></script>
-<script type="text/javascript" src="js/controllers/tokensManagerController.js"></script>
-<script type="text/javascript" src="js/controllers/associateController.js"></script>
+<script type="text/javascript" src="js/controllers/regLogController.js"></script>
+
+
 </body>
 </html>

@@ -9,16 +9,7 @@ softUni.controller('SoftUniController', function ($scope, $location, $routeParam
 });
 
 
-/*softUni.controller('Login', function ($scope, $location) {
-    $scope.title='Login page';
-
-    $scope.credentials={username:'', password:''}
-
-    $scope.login= function () {
-        console.log($scope.credentials.username);
-    };
-});
-
+/*
 softUni.controller('UserPublishNewAdController',
     function ($scope, $rootScope, $location, townsService, categoriesService,
               userService, notifyService) {

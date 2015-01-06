@@ -6,61 +6,58 @@
                 <div class="form-group">
                     <label for="username" class="col-lg-2 control-label">Username:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="username" placeholder="Username" required data-ng-model="registration.userName">
+                        <input type="text" class="form-control" id="username" placeholder="Username" required ng-model="username">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password:</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required data-ng-model="registration.password">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required ng-model="password">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Confirm Password:</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword_repeat" placeholder="Confirm Password" required data-ng-model="registration.confirmPassword">
+                        <input type="password" class="form-control" id="inputPassword_repeat" placeholder="Confirm Password" required ng-model="confirmPassword">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="name" class="col-lg-2 control-label">Name:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="name" placeholder="Name" required data-ng-model="registration.name">
+                        <input type="text" class="form-control" id="name" placeholder="Name" required ng-model="name">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" required data-ng-model="registration.email">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" required ng-model="email">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="phone" class="col-lg-2 control-label">Phone:</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="phone" placeholder="Phone" data-ng-model="registration.phone">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone" ng-model="phone">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="town" class="col-lg-2 control-label">Town:</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="town" ng-model="adData.townId">
-                            <option value="null">(None)</option>
-                            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                        <select class="form-control" id="town" >
+                            <option>(None)</option>
+                            <option ng-repeat="town in towns" ng-class="getTownClass(town.id)">{{town.name}}</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button class="btn btn-default" ><a href="#/ads">Cancel</a></button>
-                        <button type="submit" class="btn btn-primary" data-ng-click="signUp()" ng-disabled="registerForm.$invalid">Submit</button>
-                        <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
-                            {{message}}
-                        </div>
+                        <button type="submit" class="btn btn-primary" data-ng-click="register()" ng-disabled="registerForm.$invalid">Submit</button>
                     </div>
                 </div>
             </fieldset>

@@ -5,7 +5,7 @@ softUni.controller('AdsController', function ($scope,mainData, $location, $route
     };
 
     $scope.currentPage = 1;
-    $scope.totalItems = 99999999;
+    $scope.totalItems = 100000;
     $scope.maxSize = 5;
     $scope.itemsPerPage = 5;
 

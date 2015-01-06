@@ -1,13 +1,5 @@
-var softUni=angular.module('softUniModule',['ngRoute', 'ui.bootstrap', 'LocalStorageModule', 'angular-loading-bar'])
-.config(function($routeProvider){
-        $routeProvider.when("/register", {
-            controller: "signupController",
-            templateUrl: "templates/register.html"
-        });
-        $routeProvider.when("/login", {
-            controller: "loginController",
-            templateUrl: "templates/login.html"
-        });
+var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage','ui.bootstrap'])
+    .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
         $routeProvider.when('/ads',{
             controller: 'AdsController',
             templateUrl:'templates/all-ads.html'
@@ -16,38 +8,35 @@ var softUni=angular.module('softUniModule',['ngRoute', 'ui.bootstrap', 'LocalSto
             controller: 'AdsController',
             templateUrl:'templates/all-ads.html'
         });
-        $routeProvider.when("/refresh", {
-            controller: "refreshController",
-            templateUrl: "templates/refresh.html"
+        $routeProvider.when('/login',{
+            controller: 'regLogController',
+            templateUrl:'templates/login.html'
         });
-
-        $routeProvider.when("/tokens", {
-            controller: "tokensManagerController",
-            templateUrl: "templates/tokens.html"
-        });
-
-        $routeProvider.when("/associate", {
-            controller: "associateController",
-            templateUrl: "templates/associate.html"
+        $routeProvider.when('/register', {
+            controller: 'regLogController',
+            templateUrl:'templates/register.html'
         });
 
         $routeProvider.otherwise({redirectTo:'/ads'});
-    });
-//controller: 'UserPublishNewAdController'
 
-softUni.run(['authService', function (authService) {
-    authService.fillAuthData();
+        $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function($q, $location, $localStorage) {
+            return {
+                'request': function (config) {
+                    config.headers = config.headers || {};
+                    if ($localStorage.token) {
+                        config.headers.Authorization = 'Bearer ' + $localStorage.token;
+                    }
+                    return config;
+                },
+                'responseError': function(response) {
+                    if(response.status === 401 || response.status === 403) {
+                        $location.path('/user');
+                    }
+                    return $q.reject(response);
+                }
+            };
+        }]);
+
 }]);
-var serviceBase = 'http://softuni-ads.azurewebsites.net/';
-softUni.constant('ngAuthSettings', {
-    apiServiceBaseUri: serviceBase,
-    clientId: 'ngAuthApp'
-});
 
-softUni.config(function ($httpProvider) {
-    $httpProvider.interceptors.push('authInterceptorService');
-});
 
-softUni.run(['authService', function (authService) {
-    authService.fillAuthData();
-}]);
