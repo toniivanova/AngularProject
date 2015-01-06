@@ -38,7 +38,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             if (res.type == false) {
                 alert(res.data)
             } else {
-                $localStorage.token = res.data.token;
+                $localStorage.token = res.token;
                 //window.location = "/login"
                 $location.path('/login');
                 console.log('Login successful!');

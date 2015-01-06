@@ -16,6 +16,10 @@ var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage',
             controller: 'regLogController',
             templateUrl:'templates/register.html'
         });
+        $routeProvider.when('/user', {
+            controller: 'UserCtrl',
+            templateUrl: 'templates/user.html'
+        });
 
         $routeProvider.otherwise({redirectTo:'/ads'});
 
