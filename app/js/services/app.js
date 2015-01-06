@@ -17,9 +17,23 @@ var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage',
             templateUrl:'templates/register.html'
         });
         $routeProvider.when('/user', {
-            controller: 'UserCtrl',
+            controller: 'userCtrl',
             templateUrl: 'templates/user.html'
         });
+        $routeProvider.when('/newAdv', {
+            //controller: 'userCtrl',
+            templateUrl: 'templates/newAdv.html'
+        });
+        $routeProvider.when('/editProfile', {
+            //controller: 'userCtrl',
+            templateUrl: 'templates/editProfile.html'
+        });
+        $routeProvider.when('/editAdv', {
+            //controller: 'userCtrl',
+            templateUrl: 'templates/editAdv.html'
+        });
+
+
 
         $routeProvider.otherwise({redirectTo:'/ads'});
 

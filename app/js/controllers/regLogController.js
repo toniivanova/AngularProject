@@ -19,6 +19,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             }
         }, function() {
             $rootScope.error = 'Failed to login';
+            console.log('Login error!');
 
         })
     };
@@ -41,7 +42,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
                 $localStorage.token = res.token;
                 //window.location = "/login"
                 $location.path('/login');
-                console.log('Login successful!');
+                console.log('Register successful!');
             }
         }, function() {
             $rootScope.error = 'Failed to register';
@@ -68,9 +69,9 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
         });
     };
     $scope.token = $localStorage.token;
-}])
+}]);
 
-    .controller('userCtrl', ['$rootScope', '$scope', '$location', 'mainData', function($rootScope, $scope, $location, mainData) {
+softUni.controller('userCtrl', ['$rootScope', '$scope', '$location', 'mainData', function($rootScope, $scope, $location, mainData) {
 
         mainData.user(function(res) {
             $scope.myDetails = res;
