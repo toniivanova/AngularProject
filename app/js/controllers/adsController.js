@@ -1,4 +1,4 @@
-softUni.controller('AdsController', function ($scope,mainData, $location, $routeParams) {
+softUni.controller('AdsController', function ($scope, mainData, $location, $routeParams) {
     $scope.setPage = function (pageNo) {
         $scope.currentPage = pageNo;
         $location.path('/ads/page='+pageNo);
@@ -18,7 +18,7 @@ softUni.controller('AdsController', function ($scope,mainData, $location, $route
         $location.path('/ads/page='+$scope.currentPage);
     };
 
-    /*mainData.getAllAds($scope.itemsPerPage, $scope.currentPage, function(resp) {
+    mainData.getAllAds($scope.itemsPerPage, $scope.currentPage, function(resp) {
         $scope.data = resp;
         $scope.totalItems = $scope.data.numItems;
     });
@@ -28,7 +28,7 @@ softUni.controller('AdsController', function ($scope,mainData, $location, $route
     });
     mainData.getAllCategories(function(resp){
         $scope.categories=resp;
-    });*/
+    });
 
     var currentCategorySelected = 'all';
     var currentTownSelected = 'all';

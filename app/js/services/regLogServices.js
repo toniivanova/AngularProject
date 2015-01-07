@@ -1,5 +1,5 @@
 'use strict';
-softUni.factory('mainData', ['$http', '$localStorage', function($http, $localStorage){
+softUni.factory('reglogData', ['$http', '$localStorage', function($http, $localStorage){
     var baseUrl = "http://softuni-ads.azurewebsites.net/api/";
     function changeUser(user) {
         angular.extend(currentUser, user);

@@ -1,4 +1,4 @@
-softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'mainData', function($rootScope, $scope, $location, $localStorage, mainData) {
+softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData', function($rootScope, $scope, $location, $localStorage, reglogData) {
 
 
     $scope.login = function() {
@@ -7,7 +7,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             password: $scope.password
         }
 
-        mainData.login(formData, function(res) {
+        reglogData.login(formData, function(res) {
             if (res.type == false) {
                 alert(res.data)
             } else {
@@ -35,7 +35,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             //adData.townId: $scope.adData.townId,
         }
 
-        mainData.register(formData, function(res) {
+        reglogData.register(formData, function(res) {
             if (res.type == false) {
                 alert(res.data)
             } else {
@@ -51,7 +51,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
     };
 
     $scope.user = function() {
-        mainData.user(function(res) {
+        reglogData.user(function(res) {
             $scope.myDetails = res;
         }, function() {
             $rootScope.error = 'Failed to fetch details';
@@ -60,7 +60,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
     };
 
     $scope.logout = function() {
-        mainData.logout(function() {
+        reglogData.logout(function() {
             //window.location = "/"
             console.log('Logout is successful');
             $location.path('/login');
@@ -71,9 +71,9 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
     $scope.token = $localStorage.token;
 }]);
 
-softUni.controller('userCtrl', ['$rootScope', '$scope', '$location', 'mainData', function($rootScope, $scope, $location, mainData) {
+softUni.controller('userCtrl', ['$rootScope', '$scope', '$location', 'reglogData', function($rootScope, $scope, $location, reglogData) {
 
-        mainData.user(function(res) {
+        reglogData.user(function(res) {
             $scope.myDetails = res;
         }, function() {
             $rootScope.error = 'Failed to fetch details';
