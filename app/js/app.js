@@ -1,5 +1,11 @@
-var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage','ui.bootstrap'])
-    .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
+var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage','ui.bootstrap', 'angular-growl'])
+
+    softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpProvider) {
+        growlProvider.globalTimeToLive(4000);
+        growlProvider.onlyUniqueMessages(true);
+    }]);
+
+    softUni.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
         $routeProvider.when('/ads',{
             controller: 'AdsController',
             templateUrl:'templates/all-ads.html'
@@ -54,7 +60,7 @@ var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage',
                 }
             };
         }]);
+    }])
 
-}]);
 
 

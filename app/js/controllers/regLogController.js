@@ -1,5 +1,5 @@
-softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData', function($rootScope, $scope, $location, $localStorage, reglogData) {
-
+softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData',
+    function($rootScope, $scope, $location, $localStorage, reglogData, growl) {
 
     $scope.login = function() {
         var formData = {
@@ -14,13 +14,15 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
                 $localStorage.token = res.access_token;
                 $localStorage.username = res.username;
                 //window.location = "/user";
-                $location.path('/user');
                 console.log('Login successful!');
+                growl.success('Login is successful!');
+                $location.path('/user');
+
             }
         }, function() {
             $rootScope.error = 'Failed to login';
             console.log('Login error!');
-
+            growl.error('Login is error!');
         })
     };
 
@@ -31,7 +33,8 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             confirmPassword: $scope.confirmPassword,
             name: $scope.name,
             email: $scope.email,
-            phone: $scope.phone
+            phone: $scope.phone,
+            town: $scope.town
             //adData.townId: $scope.adData.townId,
         }
 
@@ -41,12 +44,14 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             } else {
                 $localStorage.token = res.token;
                 //window.location = "/login"
-                $location.path('/login');
                 console.log('Register successful!');
+                growl.success('Register is successful!');
+                $location.path('/login');
             }
         }, function() {
             $rootScope.error = 'Failed to register';
             console.log('Register error!');
+            growl.error('Register is error!');
         })
     };
 
@@ -63,6 +68,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
         reglogData.logout(function() {
             //window.location = "/"
             console.log('Logout is successful');
+            growl.success('Logout is successful!');
             $location.path('/login');
         }, function() {
             alert("Failed to logout!");
