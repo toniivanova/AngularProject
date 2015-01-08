@@ -3,7 +3,7 @@
         <div class="col-md-2">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Navigation</h3>
+                    <p class="panel-title">To publish a new ad, please login or register</p>
                 </div>
                 <div class="panel-body">
                     <a href="#/login">Login</a>
@@ -53,8 +53,12 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Categories</h3>
                 </div>
-                <div class="panel-body" id="categoryStyle" ng-repeat="category in categories" ng-click="categoryClicked(category.id)"
-                     ng-class="getCategoryClass(category.id)">
+                <div class="panel-body" id="categoryStyle" ng-click="categoryClicked(null)"
+                     ng-class="{'clickForm' : adsParams.categoryId == null}">
+                    All
+                </div>
+                <div class="panel-body" ng-repeat="category in categories" ng-click="categoryClicked(category.id)"
+                     ng-class="{'clickForm' : adsParams.categoryId == category.id}">
                     {{category.name}}
                 </div>
             </div>
@@ -62,14 +66,18 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Towns</h3>
                 </div>
-                <div class="panel-body" id="townStyle" ng-repeat="town in towns" ng-click="townClicked(town.id)"
-                     ng-class="getTownClass(town.id)">
+                <div class="panel-body" id="townStyle" ng-click="townClicked(null)"
+                     ng-class="{'clickForm' : adsParams.townId == null}">
+                    All
+                </div>
+                <div class="panel-body" ng-repeat="town in towns" ng-click="townClicked(town.id)"
+                     ng-class="{'clickForm' : adsParams.townId == town.id}">
                     {{town.name}}
                 </div>
             </div>
         </div>
     </div>
-    <pagination class="pagination" total-items="totalItems" items-per-page="itemsPerPage" max-size="maxSize"
-                page="$parent.currentPage" ng-model="currentPage" boundary-links="true" rotate="true"
+    <pagination class="pagination" total-items="totalItems" items-per-page="adsParams.pageSize" max-size="5"
+                page="adsParams.startPage" ng-model="adsParams.startPage" boundary-links="true" rotate="true"
                 ng-change="pageChanged()"></pagination>
 </div>

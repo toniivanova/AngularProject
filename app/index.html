@@ -13,6 +13,7 @@
 </head>
 <body ng-app="softUniModule">
 <div growl></div>
+<header>
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
         <a class="navbar-brand" href="#">SoftUniAd</a>
@@ -27,16 +28,27 @@
         </div>
     </div>
 </div>
-
+</header>
 
 <div ng-view="" class="container">
 
 </div>
+
+<div class="navbar navbar-inverse">
+    <div class="navbar-footer">
+        <h5 class="footer">Ads-Home 2014 by Software University Foundation, No Rights Reserved</h5>
+    </div>
+
+</div>
+
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="lib/angular/angular.js"></script>
 <script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
 <script type="text/javascript" src="lib/ngStorage.js"></script>
 <script type="text/javascript" src="lib/angular/angular-resource.min.js"></script>
+<script type="text/javascript" src="lib/angular/angular-cookies.min.js"></script>
 <script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
 <script type="text/javascript" src="lib/ngStorage.js"></script>
 <script type="text/javascript" src="lib/growl/angular-growl.js"></script>
@@ -49,6 +61,8 @@
 <script type="text/javascript" src="js/controllers/mainController.js"></script>
 <script type="text/javascript" src="js/controllers/adsController.js"></script>
 <script type="text/javascript" src="js/controllers/regLogController.js"></script>
+<script type="text/javascript" src="js/controllers/userController.js"></script>
+<script type="text/javascript" src="js/controllers/editProfileController.js"></script>
 
 </body>
 </html>

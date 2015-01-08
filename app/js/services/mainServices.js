@@ -1,46 +1,33 @@
-softUni.factory('mainData', function ($http, $log, $rootScope) {
-    return{
-        getAllAds:function(pageSize, startPage, success){
-            $http({method:'GET', url: 'http://softuni-ads.azurewebsites.net/api/ads?PageSize='+pageSize+'&StartPage='+startPage})
-                .success(function(data,status,headers,config){
-                    success(data);
-                })
-                .error(function(data,status,headers,config){
-                    $log.warn(data);
-                    growl.error(data.error_description);
-                });
-        },
-        getAllTowns: function(success) {
-            $http({method: 'GET', url: 'http://softuni-ads.azurewebsites.net/api/towns'})
-                .success(function (data, status, headers, config) {
-                    success(data);
-                })
-                .error(function (data, status, headers, config) {
-                    $log.warn(data);
-                });
-        },
-        getAllCategories: function(success) {
-            $http({method: 'GET', url: 'http://softuni-ads.azurewebsites.net/api/categories'})
-                .success(function (data, status, headers, config) {
-                    success(data);
-                })
-                .error(function (data, status, headers, config) {
-                    $log.warn(data);
-                });
-        },
-        getAdsFilter: function (townId, categoryId, success) {
+softUni.factory('mainData', function ($rootScope, $resource, baseServiceUrl) {
+    return {
+        getAllAds: function (params, success, error) {
             $rootScope.$broadcast('isLoading', true);
-            $http({method:'GET', url: 'http://softuni-ads.azurewebsites.net/api/ads?townid='+townId+'&categoryid='+categoryId})
-                .success(function(data) { //data, status, headers, config
-                    // this callback will be called asynchronously
-                    // when the response is available
-                    success(data);
-                })
-                .error(function(data) {
-                    // called asynchronously if an error occurs
-                    // or server returns response with an error status.
-                    $log.warn(data);
-                });
+            var adsResource = $resource(
+                baseServiceUrl + '/api/ads',
+                null,
+                {
+                    'getAll': {method: 'GET'}
+                }
+            );
+            return adsResource.getAll(params, success, error);
+        }
+    }
+});
+
+softUni.factory('filterService', function ($resource, baseServiceUrl) {
+    var categoriesResource = $resource(
+        baseServiceUrl + '/api/categories'
+    );
+    var townsResource = $resource(
+        baseServiceUrl + '/api/towns'
+    );
+
+    return {
+        getCategories: function (success, error) {
+            return categoriesResource.query(success, error);
+        },
+        getTowns: function(success, error) {
+            return townsResource.query(success, error);
         }
     }
 });

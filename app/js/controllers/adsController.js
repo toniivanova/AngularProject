@@ -1,61 +1,77 @@
-softUni.controller('AdsController', function ($scope, mainData, $location, $routeParams) {
+softUni.controller('AdsController', function ($scope, mainData, filterService, $location, $routeParams, $cookieStore) {
+    $scope.adsParams = $cookieStore.get('adsParams') || {
+        startPage: 1,
+        pageSize: 5,
+        townId: null,
+        categoryId: null
+    };
+
+
     $scope.setPage = function (pageNo) {
-        $scope.currentPage = pageNo;
+        $scope.adsParams.startPage = pageNo;
+        $cookieStore.put('adsParams', $scope.adsParams);
         $location.path('/ads/page='+pageNo);
     };
 
-    $scope.currentPage = 1;
     $scope.totalItems = 100000;
-    $scope.maxSize = 5;
-    $scope.itemsPerPage = 5;
 
     if ($routeParams.page && $routeParams.page>0 ) {
-        $scope.currentPage = $routeParams.page;
+        $scope.adsParams.startPage = $routeParams.page;
     }
 
     $scope.pageChanged = function() {
-        console.log('Page changed to: ' + $scope.currentPage);
-        $location.path('/ads/page='+$scope.currentPage);
+        $location.path('/ads/page='+$scope.adsParams.startPage);
     };
 
-    mainData.getAllAds($scope.itemsPerPage, $scope.currentPage, function(resp) {
-        $scope.data = resp;
-        $scope.totalItems = $scope.data.numItems;
-    });
+    $scope.pageSizeChanged = function() {
+        reloadAllAds();
+    };
 
-    mainData.getAllTowns(function(resp){
-        $scope.towns=resp;
-    });
-    mainData.getAllCategories(function(resp){
-        $scope.categories=resp;
-    });
+    reloadAllAds();
 
-    var currentCategorySelected = 'all';
-    var currentTownSelected = 'all';
+    filterService.getTowns(function(resp) {
+            $scope.towns = resp;
+        },
+        function(error){
+            growl.error(error.error_description);
+        });
+    filterService.getCategories(function(resp) {
+            $scope.categories = resp;
+        },
+        function(error){
+            growl.error(error.error_description);
+        });
 
     $scope.categoryClicked = function (categorySelected) {
-        currentCategorySelected = categorySelected;
-        filterByTownAndCategory();
+        if (categorySelected != $scope.adsParams.categoryId) {
+            $scope.adsParams.categoryId = categorySelected;
+            $scope.adsParams.startPage = 1;
+            $cookieStore.put('adsParams', $scope.adsParams);
+            reloadAllAds();
+            $location.path('/ads/page='+$scope.adsParams.startPage);
+        }
     };
 
     $scope.townClicked = function (townSelected) {
-        currentTownSelected = townSelected;
-        filterByTownAndCategory();
+        if (townSelected != $scope.adsParams.townId) {
+            $scope.adsParams.townId = townSelected;
+            $scope.adsParams.startPage = 1;
+            $cookieStore.put('adsParams', $scope.adsParams);
+            reloadAllAds();
+            $location.path('/ads/page='+$scope.adsParams.startPage);
+        }
     };
 
-    function filterByTownAndCategory () {
-        var categoryFilterId = currentCategorySelected == 'all' ? '' : currentCategorySelected;
-        var townFilterId = currentTownSelected == 'all' ? '' : currentTownSelected;
-        mainData.getAdsFilter(townFilterId, categoryFilterId, function(resp) {
-            $scope.data = resp;
-            $scope.totalItems = $scope.data.numItems;
-        });
+    function reloadAllAds () {
+        mainData.getAllAds(
+            $scope.adsParams,
+            function(resp) {
+                $scope.data = resp;
+                $scope.totalItems = $scope.data.numItems;
+            },
+            function (error) {
+                growl.error(error.error_description);
+            });
     }
 
-    $scope.getCategoryClass = function (categoryId) {
-        return categoryId === currentCategorySelected ? 'clickForm' : '';
-    };
-    $scope.getTownClass = function (townId) {
-        return townId === currentTownSelected ? 'clickForm' : '';
-    };
 });

@@ -1,11 +1,17 @@
-<div class="row" ng-controller="userCtrl">
+<div class="jumbotron">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-footer">
+            <h5 class="footer" id="usernameLog">WELCOME!</h5>
+        </div>
+    </div>
+<div class="row" >
     <div class="col-md-2">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Navigation</h3>
             </div>
             <div class="panel-body">
-                <a href="#/ads">Home</a>
+                <a href="#/user">Home</a>
             </div>
             <div class="panel-body">
                 <a href="#">My Ads</a>
@@ -17,12 +23,8 @@
                 <a href="#/editProfile">Edit Profile</a>
             </div>
             <div class="panel-body">
-                <p>EXAMPLE welcome username</p>
-            </div>
-            <div class="panel-body">
                 <a href data-ng-click="logout()" ng-controller="regLogController">Logout</a>
             </div>
-
         </div>
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -45,4 +47,71 @@
             </div>
         </div>
     </div>
+    <div class="col-md-8" ng-controller="AdsController">
+        <ul id="ul">
+            <li ng-repeat="ad in data.ads">
+                <div class="container well">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h3 class="pull-left">{{ad.title}}</h3>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="pull-right">{{ad.date | date: 'd-MMM-yyyy'}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="image-container">
+                                <img src="" ng-src="{{ad.imageDataUrl}}" class="_fullHD">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                {{ad.text}}
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div><strong>Name: </strong>{{ad.ownerName}}</div>
+                                    <div><strong>E-mail: </strong>{{ad.ownerEmail}}</div>
+                                    <div><strong>Phone: </strong>{{ad.ownerPhone}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-2" ng-controller="AdsController">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Categories</h3>
+            </div>
+            <div class="panel-body" id="categoryStyle" ng-click="categoryClicked(null)"
+                 ng-class="{'clickForm' : adsParams.categoryId == null}">
+                All
+            </div>
+            <div class="panel-body" ng-repeat="category in categories" ng-click="categoryClicked(category.id)"
+                 ng-class="{'clickForm' : adsParams.categoryId == category.id}">
+                {{category.name}}
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Towns</h3>
+            </div>
+            <div class="panel-body" id="townStyle" ng-click="townClicked(null)"
+                 ng-class="{'clickForm' : adsParams.townId == null}">
+                All
+            </div>
+            <div class="panel-body" ng-repeat="town in towns" ng-click="townClicked(town.id)"
+                 ng-class="{'clickForm' : adsParams.townId == town.id}">
+                {{town.name}}
+            </div>
+        </div>
+    </div>
+</div>
+    <pagination class="pagination" total-items="totalItems" items-per-page="adsParams.pageSize" max-size="5"
+                page="adsParams.startPage" ng-model="adsParams.startPage" boundary-links="true" rotate="true"
+                ng-change="pageChanged()"></pagination>
 </div>

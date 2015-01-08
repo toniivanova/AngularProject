@@ -1,7 +1,9 @@
-var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage','ui.bootstrap', 'angular-growl'])
+var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage','ui.bootstrap','ngCookies','angular-growl'])
 
-    softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpProvider) {
-        growlProvider.globalTimeToLive(4000);
+softUni.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
+
+softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpProvider) {
+        growlProvider.globalTimeToLive(3000);
         growlProvider.onlyUniqueMessages(true);
     }]);
 
@@ -23,7 +25,7 @@ var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage',
             templateUrl:'templates/register.html'
         });
         $routeProvider.when('/user', {
-            controller: 'userCtrl',
+            controller: 'userController',
             templateUrl: 'templates/user.html'
         });
         $routeProvider.when('/newAdv', {
@@ -38,9 +40,6 @@ var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage',
             //controller: 'userCtrl',
             templateUrl: 'templates/editAdv.html'
         });
-
-
-
         $routeProvider.otherwise({redirectTo:'/ads'});
 
         $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function($q, $location, $localStorage) {

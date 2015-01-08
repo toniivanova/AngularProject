@@ -1,5 +1,9 @@
-softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData',
+softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData', 'growl',
     function($rootScope, $scope, $location, $localStorage, reglogData, growl) {
+
+        /*mainData.getAllTowns(function(resp){
+            $scope.towns=resp;
+        });*/
 
     $scope.login = function() {
         var formData = {
@@ -11,8 +15,10 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             if (res.type == false) {
                 alert(res.data)
             } else {
-                $localStorage.token = res.access_token;
-                $localStorage.username = res.username;
+                localStorage.setItem('token', res.access_token);
+                localStorage.setItem('username', res.username);
+                //$localStorage.token = res.access_token;
+                //$localStorage.username = res.username;
                 //window.location = "/user";
                 console.log('Login successful!');
                 growl.success('Login is successful!');
@@ -27,6 +33,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
     };
 
     $scope.register = function() {
+
         var formData = {
             username: $scope.username,
             password: $scope.password,
@@ -67,6 +74,7 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
     $scope.logout = function() {
         reglogData.logout(function() {
             //window.location = "/"
+            localStorage.clear();
             console.log('Logout is successful');
             growl.success('Logout is successful!');
             $location.path('/login');
@@ -77,12 +85,3 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
     $scope.token = $localStorage.token;
 }]);
 
-softUni.controller('userCtrl', ['$rootScope', '$scope', '$location', 'reglogData', function($rootScope, $scope, $location, reglogData) {
-
-        reglogData.user(function(res) {
-            $scope.myDetails = res;
-        }, function() {
-            $rootScope.error = 'Failed to fetch details';
-
-        })
-        }]);
