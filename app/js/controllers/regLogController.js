@@ -1,9 +1,16 @@
-softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData', 'growl',
-    function($rootScope, $scope, $location, $localStorage, reglogData, growl) {
+softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData', 'growl', 'filterService',
+    function($rootScope, $scope, $location, $localStorage, reglogData, growl, filterService) {
 
         /*mainData.getAllTowns(function(resp){
             $scope.towns=resp;
         });*/
+
+        filterService.getTowns(function(resp) {
+                $scope.towns = resp;
+            },
+            function(error){
+                growl.error(error.error_description);
+            });
 
     $scope.login = function() {
         var formData = {

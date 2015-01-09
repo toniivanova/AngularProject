@@ -1,6 +1,7 @@
 var softUni=angular.module('softUniModule',['ngRoute', 'ngResource','ngStorage','ui.bootstrap','ngCookies','angular-growl'])
 
 softUni.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
+//softUni.constant('baseServiceUrl', 'http://localhost:1337');
 
 softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpProvider) {
         growlProvider.globalTimeToLive(3000);
@@ -28,8 +29,12 @@ softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpP
             controller: 'userController',
             templateUrl: 'templates/user.html'
         });
+        $routeProvider.when('/user/ads', {
+            templateUrl: 'templates/adsLogged.html',
+            controller: 'Secure'
+        });
         $routeProvider.when('/newAdv', {
-            //controller: 'userCtrl',
+            controller: 'newAdvController',
             templateUrl: 'templates/newAdv.html'
         });
         $routeProvider.when('/editProfile', {

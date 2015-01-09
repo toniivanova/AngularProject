@@ -50,7 +50,8 @@
                     <div class="col-lg-10">
                         <select class="form-control" id="town" >
                             <option>(None)</option>
-                            <option ng-repeat="town in towns" ng-class="getTownClass(town.id)">{{town.name}}</option>
+                            <option ng-repeat="town in towns" ng-click="townClicked(town.id)"
+                                    ng-class="{'clickForm' : adsParams.townId == town.id}">{{town.name}}</option>
                         </select>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 softUni.controller('AdsController', function ($scope, mainData, filterService, $location, $routeParams, $cookieStore) {
     $scope.adsParams = $cookieStore.get('adsParams') || {
         startPage: 1,
-        pageSize: 5,
+        pageSize: 2,
         townId: null,
         categoryId: null
     };
