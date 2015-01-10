@@ -28,23 +28,23 @@
                     <h3 class="panel-title">My Ads</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="#/userAds">All</a>
+                    <a href="" ng-click="statusMenuClicked(undefined)" ng-class="{'active' : statusMenuId == undefined}">All</a>
                 </div>
                 <div class="panel-body">
-                    <a href="#">Published</a>
+                    <a href="" ng-click="statusMenuClicked(2)" ng-class="{'active' : statusMenuId == 2}">Published</a>
                 </div>
                 <div class="panel-body">
-                    <a href="#">Waiting Approval</a>
+                    <a href="" ng-click="statusMenuClicked(1)" ng-class="{'active' : statusMenuId == 1}">Waiting Approval</a>
                 </div>
                 <div class="panel-body">
-                    <a href="#">Inactive</a>
+                    <a href="" ng-click="statusMenuClicked(0)" ng-class="{'active' : statusMenuId == 0}">Inactive</a>
                 </div>
                 <div class="panel-body">
-                    <a href="#">Rejected</a>
+                    <a href="" ng-click="statusMenuClicked(3)" ng-class="{'active' : statusMenuId == 3}">Rejected</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-8" ng-controller="AdsController">
+        <div class="col-md-10">
             <ul id="ul">
                 <li ng-repeat="ad in data.ads">
                     <div class="container well">
@@ -79,34 +79,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-2" ng-controller="AdsController">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Categories</h3>
-                </div>
-                <div class="panel-body"  ng-click="categoryClicked(null)"
-                     ng-class="{'clickForm' : adsParams.categoryId == null}">
-                    All
-                </div>
-                <div class="panel-body" id="categoryStyle" ng-repeat="category in categories" ng-click="categoryClicked(category.id)"
-                     ng-class="{'clickForm' : adsParams.categoryId == category.id}">
-                    {{category.name}}
-                </div>
-            </div>
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Towns</h3>
-                </div>
-                <div class="panel-body" ng-click="townClicked(null)"
-                     ng-class="{'clickForm' : adsParams.townId == null}">
-                    All
-                </div>
-                <div class="panel-body" id="townStyle" ng-repeat="town in towns" ng-click="townClicked(town.id)"
-                     ng-class="{'clickForm' : adsParams.townId == town.id}">
-                    {{town.name}}
-                </div>
-            </div>
-        </div>
+
     </div>
     <pagination class="pagination" total-items="totalItems" items-per-page="adsParams.pageSize" max-size="5"
                 page="adsParams.startPage" ng-model="adsParams.startPage" boundary-links="true" rotate="true"

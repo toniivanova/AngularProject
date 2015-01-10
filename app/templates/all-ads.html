@@ -56,11 +56,11 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Categories</h3>
                 </div>
-                <div class="panel-body" id="categoryStyle" ng-click="categoryClicked(null)"
+                <div class="panel-body"  ng-click="categoryClicked(null)"
                      ng-class="{'clickForm' : adsParams.categoryId == null}">
                     All
                 </div>
-                <div class="panel-body" ng-repeat="category in categories" ng-click="categoryClicked(category.id)"
+                <div class="panel-body" id="categoryStyle" ng-repeat="category in categories" ng-click="categoryClicked(category.id)"
                      ng-class="{'clickForm' : adsParams.categoryId == category.id}">
                     {{category.name}}
                 </div>
@@ -69,11 +69,11 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Towns</h3>
                 </div>
-                <div class="panel-body" id="townStyle" ng-click="townClicked(null)"
+                <div class="panel-body" ng-click="townClicked(null)"
                      ng-class="{'clickForm' : adsParams.townId == null}">
                     All
                 </div>
-                <div class="panel-body" ng-repeat="town in towns" ng-click="townClicked(town.id)"
+                <div class="panel-body" id="townStyle" ng-repeat="town in towns" ng-click="townClicked(town.id)"
                      ng-class="{'clickForm' : adsParams.townId == town.id}">
                     {{town.name}}
                 </div>
