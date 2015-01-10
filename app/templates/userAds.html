@@ -62,7 +62,7 @@
                                     <img src="" ng-src="{{ad.imageDataUrl}}" class="_fullHD">
                                 </div>
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <div>
                                     {{ad.text}}
                                 </div>
@@ -73,6 +73,13 @@
                                         <div><strong>Phone: </strong>{{ad.ownerPhone}}</div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-2 statusDiv">
+                                <strong>Status:</strong><br />
+                                <div><span class="spanStatus">{{ad.status}}</span></div>
+                                <p class="bs-component"><a href="#/editAdv"><button class="btn btn-primary btn-lg" ng-click="confirmEditAd(ad.id)">Edit</button></a></p>
+                                <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="rePublishAd(ad.id);changeClass(1);changeView('/user/ads/reload');" >Publish</button></p>
+                                <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="confirmDeleteAd(ad.id)">Delete</button></p>
                             </div>
                         </div>
                     </div>

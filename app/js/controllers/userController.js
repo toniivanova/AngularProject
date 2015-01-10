@@ -22,9 +22,8 @@ softUni.controller('userController', ['$rootScope', '$scope', '$location', 'regl
     $scope.statusMenuClicked = function (id) {
         $rootScope.statusMenuId = id;
         $scope.statusMenuId = id;
-        if ($location.url().indexOf('publish') < 0) {
-            reloadAllAds();
-        }
+        reloadAllAds();
+
     };
 
     $scope.userAdsParams = $rootScope.userAdsParams || {
@@ -32,12 +31,14 @@ softUni.controller('userController', ['$rootScope', '$scope', '$location', 'regl
         pageSize: 5
     };
 
-    reloadAllAds();
+    if ($location.url().indexOf('publish') < 0) {
+        reloadAllAds();
+    }
 
     function reloadAllAds () {
         userAdsService.getUserAds(
 
-            function(resp) {
+            /*function(resp) {
                 $scope.data = resp;
                 $scope.totalItems = $scope.data.numItems;
                 if (resp.ads.length==0) {
@@ -45,12 +46,12 @@ softUni.controller('userController', ['$rootScope', '$scope', '$location', 'regl
                 } else if (resp.ads.length==1) {
                     growl.info('There is only one ad', {ttl: 2500});
                 } else {
-                    growl.info('There are ' + resp.numItems + ' ads', {ttl: 4500});
+                    growl.info('There are ' + resp.numItems + ' ads', {ttl: 2500});
                 }
             },
             function (error) {
                 growl.error(error.error_description, {ttl: 5000});
-            },
+            },*/
             $scope.statusMenuId, $scope.userAdsParams.startPage, $scope.userAdsParams.pageSize);
     }
 }]);

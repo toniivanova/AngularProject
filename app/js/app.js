@@ -9,7 +9,11 @@ softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpP
     }]);
 
     softUni.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
-        $routeProvider.when('/ads',{
+        $routeProvider.when('/',{
+            controller: 'AdsController',
+            templateUrl:'templates/all-ads.html'
+        });
+        $routeProvider.when('/ads', {
             controller: 'AdsController',
             templateUrl:'templates/all-ads.html'
         });
@@ -29,20 +33,19 @@ softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpP
             controller: 'userController',
             templateUrl: 'templates/user.html'
         });
-        $routeProvider.when('/userAds', {
-            controller: 'userController',
-            templateUrl: 'templates/userAds.html'
+        $routeProvider.when('/user/page=:page', {
+            redirectTo: '/user'
         });
-        $routeProvider.when('/adsLogged', {
-            templateUrl: 'templates/adsLogged.html'
-
+        $routeProvider.when('/userAds', {
+            controller: 'userAdsController',
+            templateUrl: 'templates/userAds.html'
         });
         $routeProvider.when('/newAdv', {
             controller: 'newAdvController',
             templateUrl: 'templates/newAdv.html'
         });
         $routeProvider.when('/editProfile', {
-            //controller: 'userCtrl',
+            controller: 'editProfileController',
             templateUrl: 'templates/editProfile.html'
         });
         $routeProvider.when('/editAdv', {
@@ -50,7 +53,7 @@ softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpP
             templateUrl: 'templates/editAdv.html'
         });
 
-        $routeProvider.otherwise({redirectTo:'/ads'});
+        $routeProvider.otherwise({redirectTo:'/'});
 
         $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function($q, $location, $localStorage) {
             return {

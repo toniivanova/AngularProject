@@ -1,7 +1,6 @@
 softUni.controller('newAdvController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData', 'growl', 'filterService', 'GetAds',
     function($rootScope, $scope, $location, $localStorage, reglogData, growl, filterService, GetAds) {
 
-
     filterService.getTowns(function(resp) {
             $scope.towns = resp;
         },
@@ -14,12 +13,6 @@ softUni.controller('newAdvController', ['$rootScope', '$scope', '$location', '$l
         function(error){
             growl.error(error.error_description);
         });
-
-    //$scope.id = $routeParams.id;
-
-
-
-
 
     $scope.createAdv = function (newAd) {
         console.log(newAd);

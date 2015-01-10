@@ -1,4 +1,4 @@
-<!--<div class="jumbotron">
+<div class="jumbotron">
     <div class="navbar navbar-inverse">
         <div class="navbar-footer" ng-controller="userController">
             <h5 class="footer" id="usernameLog">WELCOME!</h5>
@@ -43,7 +43,7 @@
                     <a href="#">Rejected</a>
                 </div>
             </div>
-        </div>-->
+        </div>
 
 <!--<section class="col-xs-12 col-sm-10" style="display: inline-block;position: relative">
     <ul>
@@ -67,52 +67,52 @@
             </div>-->
 
 
-        <!--<div class="col-md-8" ng-controller="AdsController">
-            <ul id="ul">
-                <li ng-repeat="ad in adsByUser|filter:choiseTypeAd.status" class="row userAd">
-                    <div class="container well">
-                        <div class="row">
-                            <div class="col-md-7 divInfoAdUser">
-                                <h3 class="pull-left">{{ad.title}}</h3>
-                            </div>
-                            <div class="col-md-5">
-                                <span class="pull-right">{{ad.date | date: 'd-MMM-yyyy'}}</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="image-container" class="imageDiv">
-                                    <img src="" ng-src="{{ad.imageDataUrl}}" alt="No image from user!" class="...">
+            <div class="col-md-8" ng-controller="AdsController">
+                <ul id="ul">
+                    <li ng-repeat="ad in adsByUser|filter:choiseTypeAd.status" class="row userAd">
+                        <div class="container well">
+                            <div class="row">
+                                <div class="col-md-7 divInfoAdUser">
+                                    <h3 class="pull-left">{{ad.title}}</h3>
+                                </div>
+                                <div class="col-md-5">
+                                    <span class="pull-right">{{ad.date | date: 'd-MMM-yyyy'}}</span>
                                 </div>
                             </div>
-                            <div class="col-md-8">
-                                <div class="textDiv">
-                                    {{ad.text}}
-                                </div>
-                                <div class="infoDiv">
-                                    <div style="...">
-                                        <h4>Town: </h4><span class="spanText2">{{ad.townName}}</span>
-                                    </div>
-                                    <div style="...">
-                                        <h4>Category: </h4><span class="spanText2">{{ad.categoryName}}</span>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="image-container" class="imageDiv">
+                                        <img src="" ng-src="{{ad.imageDataUrl}}" alt="No image from user!" class="...">
                                     </div>
                                 </div>
+                                <div class="col-md-8">
+                                    <div class="textDiv">
+                                        {{ad.text}}
+                                    </div>
+                                    <div class="infoDiv">
+                                        <div style="...">
+                                            <h4>Town: </h4><span class="spanText2">{{ad.townName}}</span>
+                                        </div>
+                                        <div style="...">
+                                            <h4>Category: </h4><span class="spanText2">{{ad.categoryName}}</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-2 statusDiv">
-            <strong>Status:</strong><br />
-            <div><span class="spanStatus">{{ad.status}}</span></div>
-            <p class="bs-component"><a href="#/editAdv"><button class="btn btn-primary btn-lg" ng-click="confirmEditAd(ad.id)">Edit</button></a></p>
-            <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="rePublishAd(ad.id);changeClass(1);changeView('/user/ads/reload');" >Publish</button></p>
-            <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="confirmDeleteAd(ad.id)">Delete</button></p>
-        </div>
-    </li>
-</ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 statusDiv">
+                <strong>Status:</strong><br />
+                <div><span class="spanStatus">{{ad.status}}</span></div>
+                <p class="bs-component"><a href="#/editAdv"><button class="btn btn-primary btn-lg" ng-click="confirmEditAd(ad.id)">Edit</button></a></p>
+                <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="rePublishAd(ad.id);changeClass(1);changeView('/user/ads/reload');" >Publish</button></p>
+                <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="confirmDeleteAd(ad.id)">Delete</button></p>
+            </div>
+        </li>
+    </ul>
 </section>
 
+    </div>
 </div>
-</div>-->

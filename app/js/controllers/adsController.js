@@ -1,7 +1,7 @@
 softUni.controller('AdsController', function ($scope, mainData, filterService, $location, $routeParams, $cookieStore) {
     $scope.adsParams = $cookieStore.get('adsParams') || {
         startPage: 1,
-        pageSize: 2,
+        pageSize: 5,
         townId: null,
         categoryId: null
     };
@@ -48,7 +48,11 @@ softUni.controller('AdsController', function ($scope, mainData, filterService, $
             $scope.adsParams.startPage = 1;
             $cookieStore.put('adsParams', $scope.adsParams);
             reloadAllAds();
-            $location.path('/ads/page='+$scope.adsParams.startPage);
+            if (localStorage.getItem('token')) {
+                $location.path('/user/page='+$scope.adsParams.startPage);
+            } else {
+                $location.path('/ads/page='+$scope.adsParams.startPage);
+            }
         }
     };
 
@@ -58,7 +62,12 @@ softUni.controller('AdsController', function ($scope, mainData, filterService, $
             $scope.adsParams.startPage = 1;
             $cookieStore.put('adsParams', $scope.adsParams);
             reloadAllAds();
-            $location.path('/ads/page='+$scope.adsParams.startPage);
+            if (localStorage.getItem('token')) {
+                $location.path('/user/page='+$scope.adsParams.startPage);
+            } else {
+                $location.path('/ads/page='+$scope.adsParams.startPage);
+            }
+
         }
     };
 

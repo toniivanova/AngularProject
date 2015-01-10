@@ -1,10 +1,6 @@
 softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$localStorage', 'reglogData', 'growl', 'filterService',
     function($rootScope, $scope, $location, $localStorage, reglogData, growl, filterService) {
 
-        /*mainData.getAllTowns(function(resp){
-            $scope.towns=resp;
-        });*/
-
         filterService.getTowns(function(resp) {
                 $scope.towns = resp;
             },

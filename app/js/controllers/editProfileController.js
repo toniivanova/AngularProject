@@ -1,7 +1,10 @@
-softUni.controller('editProfileController', ['$rootScope', '$scope', '$location', '$localStorage','growl', 'mainData',
-    function($rootScope, $scope, $location, $localStorage, growl, mainData) {
+softUni.controller('editProfileController', ['$rootScope', '$scope', '$location', '$localStorage','growl', 'filterService',
+    function($rootScope, $scope, $location, $localStorage, growl, filterService) {
 
-        mainData.getAllTowns(function(resp){
-            $scope.towns=resp;
-        });
+        filterService.getTowns(function(resp) {
+                $scope.towns = resp;
+            },
+            function(error){
+                growl.error(error.error_description);
+            });
     }])
