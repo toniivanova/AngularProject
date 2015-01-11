@@ -20,9 +20,6 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             } else {
                 localStorage.setItem('token', res.access_token);
                 localStorage.setItem('username', res.username);
-                //$localStorage.token = res.access_token;
-                //$localStorage.username = res.username;
-                //window.location = "/user";
                 console.log('Login successful!');
                 growl.success('Login is successful!');
                 $location.path('/user');
@@ -45,7 +42,6 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
             email: $scope.email,
             phone: $scope.phone,
             town: $scope.town
-            //adData.townId: $scope.adData.townId,
         }
 
         reglogData.register(formData, function(res) {
@@ -53,7 +49,6 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
                 alert(res.data)
             } else {
                 $localStorage.token = res.token;
-                //window.location = "/login"
                 console.log('Register successful!');
                 growl.success('Register is successful!');
                 $location.path('/login');
@@ -76,7 +71,6 @@ softUni.controller('regLogController', ['$rootScope', '$scope', '$location', '$l
 
     $scope.logout = function() {
         reglogData.logout(function() {
-            //window.location = "/"
             localStorage.clear();
             console.log('Logout is successful');
             growl.success('Logout is successful!');

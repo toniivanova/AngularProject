@@ -1,4 +1,4 @@
-softUni.factory('GetAds', function ($http, $location, growl) {
+softUni.factory('GetAds', function ($http, $location, growl, baseServiceUrl) {
     function getToken() {
         var token = localStorage.getItem('token');
         if (!token)
@@ -43,74 +43,23 @@ softUni.factory('GetAds', function ($http, $location, growl) {
             growl.error("can't load user ads!");
         })
     }
-    function deactivateAd(id) {
-        getToken();
-        $http({
-            method: 'PUT',
-            url: 'http://softuni-ads.azurewebsites.net/api/user/ads/deactivate/' + id
-        }).success(function (data) {
-            growl.success('Advertisement was deactivated!');
-        }).error(function () {
-            growl.error("can't deactivate");
-        })
-    }
-    function rePublish(id) {
-        getToken();
-        $http({
-            method: 'PUT',
-            url: 'http://softuni-ads.azurewebsites.net/api/user/ads/publishagain/' + id
-        }).success(function (data) {
-            growl.success('Advertisement submitted for approval! Once approved, it will be published! ')
-        }).error(function () {
-            growl.error("can't re-publish!");
-        })
-    }
-    function deleteAd(id) {
-        getToken();
-        $http({
-            method: 'DELETE',
-            url: 'http://softuni-ads.azurewebsites.net/api/user/ads/' + id
-        }).success(function (data) {
-            growl.success('Advertisement was deleted!');
-            localStorage.link2 = 1;
-            $location.path('/user/ads');
-        }).error(function () {
-            growl.error("can't delete!");
-        })
-    }
-    function editAd(id, editedAd) {
-        getToken();
-        $http({
-            method: 'PUT',
-            url: 'http://softuni-ads.azurewebsites.net/api/user/ads/' + id,
-            data: {
-                title: editedAd.title,
-                text: editedAd.text,
-                changeimage: true, // TODO
-                ImageDataURL: editedAd.imageDataUrl,
-                categoryid: editedAd.categoryId,
-                townid: editedAd.townId
-            }
-        }).success(function (data) {
-            growl.success('Advertisement was edited!');
-            localStorage.link2 = 1;
-            $location.path('/user/ads');
-        }).error(function () {
-            growl.error("can't edit!");
-        })
-    }
-    function getInfoForDeleteAd(id, success) {
-        getToken();
-        $http({
-            method: 'GET',
-            url: 'http://softuni-ads.azurewebsites.net/api/user/ads/' + id
-        }).success(function (data) {
-//            console.log(data);
-            success(data);
-        }).error(function () {
 
-        })
+    function deleteAd(id, success, error) {
+        getToken();
+        var request = {
+            method: 'DELETE',
+            url: baseServiceUrl + '/api/user/ads/'+ id,
+            data: id
+        };
+        $http(request)
+            .success(function (data, status, headers, config) {
+                growl.success('Advertisement was deleted!');
+                $location.path('/userAds');
+            }).error(function (data, status, headers, config) {
+                growl.error("can't delete!");
+            })
     }
+
     function createAd(ad) {
         getToken();
         $http({
@@ -119,9 +68,7 @@ softUni.factory('GetAds', function ($http, $location, growl) {
             data:JSON.stringify(ad)
         }).success(function (data){
             growl.success('Advertisement was created!');
-            localStorage.link2 = 1;
-            localStorage.link = 2;
-            $location.path('/user/ads');
+            $location.path('/userAds');
         }).error(function (){
             growl.error('Advertisement has NOT created! Please try again!');
         })
@@ -131,11 +78,7 @@ softUni.factory('GetAds', function ($http, $location, growl) {
         getAllAds: getAllAds,
         getTowns: getTowns,
         getAdsOfUser: getAdsOfUser,
-        deactivateAd: deactivateAd,
-        rePublish: rePublish,
         deleteAd: deleteAd,
-        getInfoForDeleteAd: getInfoForDeleteAd,
-        editAd: editAd,
         createAd: createAd
     };
 });

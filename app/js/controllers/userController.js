@@ -8,14 +8,11 @@ softUni.controller('userController', ['$rootScope', '$scope', '$location', 'regl
 
     });
 
-    if (localStorage.username && localStorage.token) {
-        //$location.path('/user/home');
-
-        var userInfo = $('<p id="userInfo">').text(localStorage.getItem('username'));
-        $('#userInfo').remove();
-        //$('#userInfo').delete();
-        $('#usernameLog').append(userInfo);
-    }
+        if (localStorage.username && localStorage.token) {
+            var userInfo = $('<p id="userInfo">').text(localStorage.getItem('username'));
+            $('#userInfo').remove();
+            $('#usernameLog').append(userInfo);
+        }
 
     $scope.statusMenuId = $rootScope.statusMenuId;
 
@@ -23,7 +20,6 @@ softUni.controller('userController', ['$rootScope', '$scope', '$location', 'regl
         $rootScope.statusMenuId = id;
         $scope.statusMenuId = id;
         reloadAllAds();
-
     };
 
     $scope.userAdsParams = $rootScope.userAdsParams || {
@@ -38,8 +34,8 @@ softUni.controller('userController', ['$rootScope', '$scope', '$location', 'regl
     function reloadAllAds () {
         userAdsService.getUserAds(
 
-            /*function(resp) {
-                $scope.data = resp;
+            function(resp) {
+                /*$scope.data = resp;
                 $scope.totalItems = $scope.data.numItems;
                 if (resp.ads.length==0) {
                     growl.warning('No ads to display', {ttl: 1500});
@@ -47,11 +43,11 @@ softUni.controller('userController', ['$rootScope', '$scope', '$location', 'regl
                     growl.info('There is only one ad', {ttl: 2500});
                 } else {
                     growl.info('There are ' + resp.numItems + ' ads', {ttl: 2500});
-                }
+                }*/
             },
             function (error) {
                 growl.error(error.error_description, {ttl: 5000});
-            },*/
+            },
             $scope.statusMenuId, $scope.userAdsParams.startPage, $scope.userAdsParams.pageSize);
     }
 }]);

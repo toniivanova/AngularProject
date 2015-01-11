@@ -79,16 +79,16 @@
                                 <div><span class="spanStatus">{{ad.status}}</span></div>
                                 <p class="bs-component"><a href="#/editAdv"><button class="btn btn-primary btn-lg" ng-click="confirmEditAd(ad.id)">Edit</button></a></p>
                                 <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="rePublishAd(ad.id);changeClass(1);changeView('/user/ads/reload');" >Publish</button></p>
-                                <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="confirmDeleteAd(ad.id)">Delete</button></p>
+                                <p class="bs-component"><button class="btn btn-primary btn-lg" ng-click="deleteAdv(ad.id)">Delete</button></p>
                             </div>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
-
     </div>
     <pagination class="pagination" total-items="totalItems" items-per-page="adsParams.pageSize" max-size="5"
                 page="adsParams.startPage" ng-model="adsParams.startPage" boundary-links="true" rotate="true"
                 ng-change="pageChanged()"></pagination>
+
 </div>

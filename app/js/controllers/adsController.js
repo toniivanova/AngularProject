@@ -6,7 +6,6 @@ softUni.controller('AdsController', function ($scope, mainData, filterService, $
         categoryId: null
     };
 
-
     $scope.setPage = function (pageNo) {
         $scope.adsParams.startPage = pageNo;
         $cookieStore.put('adsParams', $scope.adsParams);
@@ -67,7 +66,6 @@ softUni.controller('AdsController', function ($scope, mainData, filterService, $
             } else {
                 $location.path('/ads/page='+$scope.adsParams.startPage);
             }
-
         }
     };
 

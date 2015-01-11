@@ -25,12 +25,13 @@ softUni.controller('newAdvController', ['$rootScope', '$scope', '$location', '$l
 
     $scope.changeView = changeView;
     function changeView(view) {
-        $location.path(view);
     }
+
     function linkClicked(index) {
         $scope.link = index;
         localStorage.link = index;
     }
+
     $scope.linkClicked = linkClicked;
 
     function readURL(input) {

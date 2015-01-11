@@ -32,7 +32,7 @@ softUni.factory('filterService', function ($resource, baseServiceUrl) {
     }
 });
 
-softUni.factory('userAdsService', function ($resource, $rootScope, $log, $http, baseServiceUrl) {
+softUni.factory('userAdsService', function ($resource, $rootScope, $log, $http, baseServiceUrl, $location) {
 
     function getMyAds(success, error, adStatus, startPage, pageSize ) {
 
@@ -59,7 +59,8 @@ softUni.factory('userAdsService', function ($resource, $rootScope, $log, $http, 
             url: baseServiceUrl + '/api/user/ads?' + statusStr + startPageStr + pageSizeStr
         };
 
-        $http(request).success(function(data) {
+        $http(request)
+            .success(function(data, status, headers, config) {
             success(data);
         }).error(function (data, status, headers, config) {
             $log.warn(data);
@@ -89,6 +90,23 @@ softUni.factory('userAdsService', function ($resource, $rootScope, $log, $http, 
             })
 
     }
+    function deleteAd(ad, success, error) {
+        var request = {
+            method: 'DELETE',
+            url: baseServiceUrl + '/api/user/ads'+ id,
+            headers: {
+                Authorization: 'Bearer ' + (localStorage.getItem('token'))
+            },
+            data: ad
+        };
+        $http(request)
+            .success(function (data, status, headers, config) {
+            growl.success('Advertisement was deleted!');
+            $location.path('/userAds');
+        }).error(function (data, status, headers, config) {
+            growl.error("can't delete!");
+        })
+    }
 
     function deactivateAd(id) {
         var request = {
@@ -109,7 +127,8 @@ softUni.factory('userAdsService', function ($resource, $rootScope, $log, $http, 
     return {
         getUserAds: getMyAds,
         deactivateAd: deactivateAd,
-        publishNewAd: postNewAd
+        publishNewAd: postNewAd,
+        deleteAd:deleteAd
     }
 
 });

@@ -1,5 +1,5 @@
-softUni.controller('userAdsController', ['$rootScope', '$scope', '$location', 'reglogData', 'userAdsService', 'growl',
-    function($rootScope, $scope, $location, reglogData, userAdsService, growl) {
+softUni.controller('userAdsController', ['$rootScope', '$scope', '$location', 'reglogData', 'GetAds', 'userAdsService', 'growl',
+    function($rootScope, $scope, $location, reglogData, GetAds, userAdsService, growl) {
 
         reglogData.user(function(res) {
             $scope.myDetails = res;
@@ -9,11 +9,8 @@ softUni.controller('userAdsController', ['$rootScope', '$scope', '$location', 'r
         });
 
         if (localStorage.username && localStorage.token) {
-            //$location.path('/user/home');
-
             var userInfo = $('<p id="userInfo">').text(localStorage.getItem('username'));
             $('#userInfo').remove();
-            //$('#userInfo').delete();
             $('#usernameLog').append(userInfo);
         }
 
@@ -23,7 +20,6 @@ softUni.controller('userAdsController', ['$rootScope', '$scope', '$location', 'r
             $rootScope.statusMenuId = id;
             $scope.statusMenuId = id;
             reloadAllAds();
-
         };
 
         $scope.userAdsParams = $rootScope.userAdsParams || {
@@ -54,4 +50,11 @@ softUni.controller('userAdsController', ['$rootScope', '$scope', '$location', 'r
                  },
                 $scope.statusMenuId, $scope.userAdsParams.startPage, $scope.userAdsParams.pageSize);
         }
+
+        $scope.deleteAdv = deleteAdv;
+        function deleteAdv(id) {
+            GetAds.deleteAd(id);
+            $location.path('/user');
+        }
+
     }]);

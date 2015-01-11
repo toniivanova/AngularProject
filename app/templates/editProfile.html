@@ -1,6 +1,6 @@
 <div class="jumbotron">
     <div class="navbar navbar-inverse">
-        <div class="navbar-footer" ng-controller="userController">
+        <div class="navbar-footer" >
             <h5 class="footer" id="usernameLog">WELCOME!</h5>
         </div>
     </div>
@@ -31,30 +31,32 @@
                 </div>
                 <div class="panel-body">
                     <p><label for="name">Name:</label></p>
-                    <p><input type="text" id="name" /></p>
+                    <p><input type="text" id="name" ng-model="user.name"/></p>
                 </div>
                 <div class="panel-body">
                     <p><label for="email">Email:</label></p>
-                    <p><input type="text" id="email" /></p>
+                    <p><input type="text" id="email" ng-model="user.email"/></p>
                 </div>
                 <div class="panel-body">
                     <p><label for="phone">Phone:</label></p>
-                    <p><input type="text" id="phone" /></p>
+                    <p><input type="text" id="phone" ng-model="user.phoneNumber"/></p>
                 </div>
-                <div class="panel-body" ng-controller="regLogController">
+                <div class="panel-body">
                     <p><label for="town" class="col-lg-offset-0">Town:</label></p>
                     <div class="col-lg-8" style="padding-left: 0">
                         <select class="form-control" id="town" ng-model="adData.townId">
                             <option>(None)</option>
                             <option ng-repeat="town in towns" ng-click="townClicked(town.id)"
-                                    ng-class="{'clickForm' : adsParams.townId == town.id}">{{town.name}}</option>
+                                    ng-class="{'clickForm' : adsParams.townId == town.id}" ng-if="user.townId != town.id">{{town.name}}</option>
+                            <option ng-repeat="town in towns" ng-click="townClicked(town.id)"
+                                    ng-class="{'clickForm' : adsParams.townId == town.id}" ng-if="user.townId == town.id">{{town.name}}</option>
                         </select>
                     </div>
                 </div>
                 <div class="panel-body">
                     <div class="col-lg-10 col-lg-offset-0">
                         <button class="btn btn-default" ><a href="#/user">Cancel</a></button>
-                        <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Update</button>
+                        <button type="submit" class="btn btn-primary" ng-click="update(user)">Update</button>
                     </div>
                 </div>
             </div>
@@ -66,15 +68,15 @@
                 </div>
                 <div class="panel-body">
                     <p><label>Old password:</label></p>
-                    <p><input type="password" id="oldPassword" /></p>
+                    <p><input type="password" id="oldPassword" ng-model="pass.oldPassword"/></p>
                 </div>
                 <div class="panel-body">
                     <p><label>New password:</label></p>
-                    <p><input type="password" id="newPassword" /></p>
+                    <p><input type="password" id="newPassword" ng-model="pass.newPassword"/></p>
                 </div>
                 <div class="panel-body">
                     <p><label>Confirm new password:</label></p>
-                    <p><input type="password" id="confirmNewPassword" /></p>
+                    <p><input type="password" id="confirmNewPassword" ng-model="pass.confirmPassword"/></p>
                     </br>
                     </br>
                     </br>
@@ -85,7 +87,7 @@
                 <div class="panel-body">
                     <div class="col-lg-10 col-lg-offset-0">
                         <button class="btn btn-default" ><a href="#/user">Cancel</a></button>
-                        <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Change password</button>
+                        <button type="submit" class="btn btn-primary" ng-click="updatePassword(pass)">Change password</button>
                     </div>
                 </div>
             </div>

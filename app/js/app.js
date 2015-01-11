@@ -48,11 +48,6 @@ softUni.config(["growlProvider", "$httpProvider", function(growlProvider, $httpP
             controller: 'editProfileController',
             templateUrl: 'templates/editProfile.html'
         });
-        $routeProvider.when('/editAdv', {
-            //controller: 'userCtrl',
-            templateUrl: 'templates/editAdv.html'
-        });
-
         $routeProvider.otherwise({redirectTo:'/'});
 
         $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function($q, $location, $localStorage) {
